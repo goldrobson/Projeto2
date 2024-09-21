@@ -1,389 +1,285 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
 
-    <link rel="stylesheet" href="/css/reset.css" />
-    <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Projeto 2</title>
-  </head>
-  <body>
-    <!-- menu -->
-    <nav class="navbar navbar-expand-lg bg-tertiary">
-      <div class="container">
-        <a class="navbar-brand " href="#"
-          ><img
-            id="imgLogo"
-            src="https://upload.wikimedia.org/wikipedia/commons/8/81/UOL_logo_old.png"
-            alt=""
-        /></a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
 
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Sobre</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#">Contato</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input
-              class="form-control me-2"
-              type="search"
-              placeholder="Pesquisar"
-              aria-label="Search"
-            />
-            <button class="btn btn-outline-success" type="submit">
-              Pesquisar
-            </button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    <!-- fim menu -->
+  <link rel="stylesheet" href="./css/reset.css" />
+  <link rel="stylesheet" href="./css/styles.css" />
+  <link rel="shortcut icon"
+    href="data:image/jpeg;base64,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"
+    type="image/x-icon" />
+  <title>RL Fardamentos</title>
+</head>
 
-    <!-- inicio carrossel -->
-    <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel" >
-      <div class="carousel-indicators">
-        <button
-          type="button"
-          data-bs-target="#carouselCaptions"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselCaptions"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselCaptions"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
-      </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-bs-interval="2000">
-          <img
-            src="https://media.istockphoto.com/id/2012883461/pt/foto/ai-data-analysis-business-people-use-ai-to-analyze-financial-related-data-big-data-complex.webp?a=1&b=1&s=612x612&w=0&k=20&c=YRTRQyOVtWSinw-XxKaDh5PkTGoj6Aa7BurFE6Ula0I="
-            class="d-block w-100 imgCarrossel"
-            alt="imagem1 TI"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="tittleCarrosel">Primeira imagem</h5>
-            <p class="subtittleCarrossel">
-              Some representative placeholder content for the first slide.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img
-            src="https://media.istockphoto.com/id/2160407303/pt/foto/the-concept-of-productivity-and-production-capacity-encompasses-industrial-management-focused.webp?a=1&b=1&s=612x612&w=0&k=20&c=7mTU_WbH1FY5W3Ptnrvlfi42QYOW-Lyim_w-QDT6Tk4="
-            class="d-block w-100 imgCarrossel"
-            alt="imagem2 TI"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="tittleCarrosel">Segunda imagem</h5>
-            <p class="subtittleCarrossel">
-              Some representative placeholder content for the second slide.
-            </p>
-          </div>
-        </div>
-        <div class="carousel-item" data-bs-interval="2000">
-          <img
-            src="https://media.istockphoto.com/id/1475998284/pt/foto/interior-of-big-modern-server-room-3d-rendering-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=6xZcMGEUaBFheDqs5klYYcqEQnejsgWnknPEngDCzrk="
-            class="d-block w-100 imgCarrossel"
-            alt="imagem3 TI"
-          />
-          <div class="carousel-caption d-none d-md-block">
-            <h5 class="tittleCarrosel">Terceira imagem</h5>
-            <p class="subtittleCarrossel">
-              Some representative placeholder content for the third slide.
-            </p>
-          </div>
-        </div>
-      </div>
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselCaptions"
-        data-bs-slide="prev"
-      >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+<body>
+  <!-- início menu -->
+  <nav class="navbar navbar-expand-lg bg-tertiary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand " href="#"><img id="imgLogo"
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA8gMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAABgcBBQMECAL/xABGEAABAwMBBAUIBQoEBwAAAAABAAIDBAURBgcSITETQVFhcRQWIlWTobHRQoGRksEVFyMyUlNicoLSM8Lh8CQ0NUNFVGP/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIDBAUG/8QAJREBAAICAgEEAgMBAAAAAAAAAAECAxESIQQTFDFRQWEyQlIi/9oADAMBAAIRAxEAPwC8UREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERYQZRYWpvmobZY4t+4VLGPIy2McXu8B/sKYiZnUImdNuirWo1xf7w9zNL2aQxcunkjLs/Bo+sla+ax7QLk3fqquZpP0HVQiH2MGFvHjz/aYhScn1G1tIqRqdGasgHSGCWYg5/RVO8feQulTag1HYarozWVkT2cTBVguaR/K7q7xhaR4nL+NolX1dfML7RRvRup4tS0Ujt0RVcBDZogeAyOBHccH7FIxyC5b1mluMtYmJ+GURFVIiIgIiICIiAiIgIiICIsEoMotVNqSyQTPhmu1GyRhw5rpmggr486LD64ofbt+atxt9I3DcItP50WH1xQ+3b8086LD64ofbt+acLfRuG4RafzosPrih9u35ruU91oKn/l6ynk/lkBUTW0fg3DuIsZHamVCWcr4kkZHG6SRwaxoyXOOAB4rhr6+kt8ImrqmKniJxvyvDRnxK0lTetPVj/8Ai7zQSQtPCEzt3T3uGePgeCmKzP4RtxVVyu98zDp1jaekPB1ynbwcP/kz6XieHis2rRNqo5fKqtj7jWOO86erdvkntxyWzpL/AGaqnZTUtzo5Zn8GRxzNJOBngPALaq3K1eo6RqJ+Xw1gaAGtAA5Y6lpr5ZrhXxu8gv8AW2+Tq6Nkbm58C38VvFgqi2lFXrU2vNGXUUtzuLKtrvSifNC0xytz1EAEHu6lMtOals20WiktlzpWw18bN/o85IH7cbufA4z4jtXJtpt0dVoySqLR0tJMx7XdYBcGke9Urp6vktV+oK+A7roJ2nxB4OHgQSFrXuNx8s56nS2dD2yo0/ryrtsji5ppXEO/bZvNLT4/6q0F0BbopLyy6jG/5KYB3tLg78Petgoy35ztasagREWawiIgIiICIiAiIgIiwgZVe7QdaeRiS02l+aojE8zT/hDsHf8ABSrUrLxNb3QWMxRzyZDppHY3B3d6rV2zW/vJc6WlJJySZTx9y6vGrj5bySyyTbWqwhR4nJzntKKafmzvv7yk9ofkn5s77+8pPaH5L0vc4v8ATn4XQtFNPzZ3395Se0PyT82d9/eUntD8k9zi/wBHC6FrAGHbzfRd1Ec1M37NL+1uWmkcezpSPwUYulsrbTUmmuNO6CXmA7k4doPWr1zY7/Eomto7lsbJq282Z46CrdNDnjBOd5p7u0K39KakpdR0JngHRzR4bNCTksP4jsKoRSfZxXPotV0rGuIjqQYnt6jkZHvAXN5Xj1tWbR8tMd5idJTtjqsUtspP25XSkZ6mjHxcqv5Ka7W6rp9TRQA+jT0reHY5xJPu3VClr4ldYo/amWd2lL9ltJ5Rq2OZwyKankkHc44aPc5yulVlsbpf+pVhHMsiB8Mn8VZq87zLcssunF/EQosHkuVog22arbBoeeInDqiaOMDt9Le/yqg6ZplqII28d6RrR45Vkbcb02pu1JZoXbzaRnSzdz3ch9nH6wors8tpu2tLXTbuY2S9PL3MZ6Xx3R/Utq9VZzO5elIGGOCNh+i0D3LkWByWVi0EREBERAREQEREBERAWFlYQMDKYCpi/wCtb2y91zKO4Pjp2TubGwNbwAOOxdDz31J60f8Acb8l1x4WSY2ynNWF7IqJ899SetH/AHG/JPPfUnrR/wBxvyVvY5UevVe3BOConz31J60f9xvyTz31J60f9xvyT2OU9eq9TjCq3a7caSeWjoYntfUQEvk3eO5kcAfiotU6v1DUs6OS6zhp57mG5+sBaQkucXOJLickniSVt4/hzS/K0qXzRMagUm2c0bqzVtGWg7tOHTPOOWBge8hRyCCWpmZBBG+WWQ4axgyXFXPonTo0xaZ6ir3TWys35iOTABwaP981t5WWKU1+ZUx1mZVhraqFXqu5yh2QJtwf0gN/BaQrkqJjUTyzk5Mkjn58Tn8VxHGMnqXRjjjSI+lLdzK59lVL0GlmykYdPK5/iOQ+CmS0+kaXyPTVtgI9IU7S7xIyfitwvByW5XmXbWNREC1eo71TWGzVNyq3Do4W5Dc/ru6mjxK2biA0knAA5rz7tU1h5xXXyGhefyZRuwCP+9J1u/lHIfb2KKxuU2nUIfcKuouNxqa+rfvT1ErpJT3k/Ach3BXFsQ0+aW2VF7nYRLWfo4S4cRGDz+s/AKrNKafqNTXuC204LWPdvTyjlFGP1j49Q7yO9enaKmho6SGmpowyGFgYxoHIDkr3nrTOkduYcllEWTUREQEREBERAREQEREBdeumFPSTzuOGxxucT4BdhR3X9X5HpC5yDgXxdEPF5DP8ytSOVohFuoUU6R00jpn/AK0hL3eJ4rCcl2LbTeWXKkpiMiadjCO0Fwz7sr6Cf+azLhjuX1+TLh/6FX7B3yWfyZcfV9X7B3yXopjd1oA6uC+sdy8z39vpv6Efbzn+S7j6vq/YO+S680MtPJ0c8UkT8Z3ZGlpx24K9KfUojtD00L5bfKKdg8upQTGRze3rZ+Pj9a0x+dM2iLR0Ww6jpSy79ipaGtuUNNc6uSlgkO70sbQeJ5ZJ5eK6GCOB5jqKLvt3Xpz/AJ7X5YNM2mxNzb4B0hGDM87z3Dx+Sa0qvItK3KYHdd0Ja0954D4qJbNNXOmLLLc5MyDhSyO+kB9A946lstrVX0WmY4AeNRUsaR3AF34BeN6d/Xit3XFq8OlPBfcFP5XURUoOHTyNiB7N5wb+K+EB4/DHUvamOtQ5P29IMnp2tDWzRBo4Ab44LkZLHID0b2vxz3TlUTpbTVx1FUYhLoqRpxJUOzgdoHafgu5q7WVJYredOaMk3QDu1VeDvOJ5ENPW49burq7R4mbDWk6i25ddbzMdw7+1fXuOl0/ZZcnG7WVLDyH7tvf2nq5eFSRsdI5kcbMvcQ1rR154YWCckk8ycnPWgJyMc1FaxEImdy9DbONOUul7KBUTQG41AD6l4ePR7GDuHxyplG9sjd5jg5p6wcheetnmiarVdWaiofLDaYX4lkDiHSkfQafierK9BUlNDR00dPTRtihjaGsY3k0DqWVo7aV+HMiIqrCIiAiIgIiICIiAiIgKJ7SLdcrtY46O107p3uqGukaHtb6IBPWR14UsWMd6tS01tFoRMbjSi/MXU5/8U728X9y3Gj9G3uk1HRVNyt5ip4XF5eZWOwcHHAOParcwgaAV0283JaNSzjDWABZRFyNRYIWUQVZrfQ1dLdn1lipemjqCXSxNe1vRv7RkjgefjlR3zF1P6pd7eL+5TXbJdLjabDRzWurlpXvqgx74sZ3d08PtUA0htMu1ornG9TT3Kik/XDiOkj728gfArtx+Tlimo0wtjpM9u2zRGqo3tfHa5WPYctc2oiBaRyP6ykWqbXqvUFutUctpeKinEnT/AKeLDnHdAI9LsB+1Sai2jaRq4myC+U0BIyWVJ6Jw8Q7C46/aVpGiYSLsypd1NpGOmJ+6MfaVWfJvNotqNwtGOsRpXXmLqf1S728X9y2lHo+hstILlrasipYAfRpWvy6Q9nDiT3NyuK/bZJ5muisNuMDTwE9UQXfU0HHvKrW53Guu1Uau51ctTUHPpvdnA7AOQHgrW8nLaNfCnCkJXrLaBNeKU2mxxG3Wdo3dxnovlb2HHJvcOfWoQG8MNaTyAAGT4ABdm3UNXc6tlJb6eSoqXnDY4xk/6DvV3bP9m0FhMdxvG5U3Pmxo4x0/h2u/i+xYzMVXiOSr4Nnur54WSx2Kbce3ebvTRNOO8F4I+tbjTGyy+V10Yy/Uj6Cgb6UjhNG50n8Ld1xwe9X5hMLObytFIde30VPbqSKkooWQ08LQyONgwGhdlEVFxERAREQEREBERAREQEREBERAREQEREBERBFdpVjkv+k6qmp2l1RFiaFo+k5vHH18V5u7efYR3heu1BNV7MrNf6iSsp3Pt9bIcyPhALJD2uZ294wfFXpbSlq7eflnxVov2LXAPO5eKUs7XROB+K2Vu2LUrCDc7vPKAeLYIwz3nPwV+cKcZU3+sQ0NLnOOGgDJJ8OtTjS+zG9XxrJ63NsonYO/KzMrh/Czq8T9hVyaf0dYNPgG2W6NsuMGeTMkh/qdk/UOC3+FWcn0tFGm0zpi06bpOhtdKGF3+JK7i+Q97lucBZRZtBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQf//Z"
+          alt="Logotipo da empresa" /></a>
+      <p class="titleFard">RL Fardamentos</p>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselCaptions"
-        data-bs-slide="next"
-      >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="ordn me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><button class="btn2"
+                type="button">Inicio</a></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"><button class="btn2" type="button">Sobre</a></button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#"><button class="btn2" type="button">Contato</a></button>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisar" aria-label="Search" />
+          <button class="btn2" type="submit">Pesquisar</button>
+        </form>
+      </div>
     </div>
+  </nav>
+  <!-- fim menu -->
 
-    <!-- inicio card´s -->
-    <div class="titleCard">
-      <p>Seleção de Ofertas para você!</p>
+  <!-- inicio carrossel -->
+  <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-
-    <div class="cardMain">
-      <div class="card" style="width: 18rem">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="4000">
         <img
-          src="https://a-static.mlcdn.com.br/280x210/smartphone-samsung-galaxy-s23-256gb-preto-5g-8gb-ram-61-cam-tripla-selfie-12mp/magazineluiza/232854100/e9fd12e9a66f2797bce34c5169369937.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 1</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2015%2F02%2F23%2F21%2FUniforme-Profissional-LV-125715_71008_034104024_1141932372.jpg"
+          class="d-block w-100 imgCarrossel" alt="Fardamrnto 1" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="tittleCarrosel">Estilo e Conforto</h5>
+          <p class="subtittleCarrossel">
+            A Nova Era do Vestuário Corporativo!
           </p>
-          
-<button type="button" class="btnCard btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Compre agora
-</button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img
+          src="https://i0.wp.com/sadalu.com.br/wp-content/uploads/2019/01/Sadalu-Linha-Completa-de-Uniformes-Profissionais.jpg?fit=2844%2C1714&ssl=1"
+          class="d-block w-100 imgCarrossel" alt="Fardamento 2" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="tittleCarrosel">Fardamentos que Inspiram</h5>
+          <p class="subtittleCarrossel">
+            Transforme Sua Equipe com Elegância!
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="4000">
+        <img
+          src="https://graficaxpress.com.br/wp-content/uploads/2022/05/graficaxpress-uniforme-padrao-por-que-investir-no-fardamento-na-empresa-veja-foto2-min-old.jpg"
+          class="d-block w-100 imgCarrossel" alt="Fardamento 3" />
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="tittleCarrosel">Modelos Inovadores</h5>
+          <p class="subtittleCarrossel">
+            A Farda Que Reflete Seu Negócio!
+          </p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  <!-- inicio card´s1 -->
+  <div class="titleCard">
+    <p>Camisas Polo Personalizadas</p>
+  </div>
+
+  <div class="cardMain">
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2023/12/polo-gola-menor-com-ziper-pablro-marcal-marcus-marques-bege-320x400.jpg"
+        class="card-img-top" alt="Camisa Polo" />
+      <div class="card-body">
+        <h5 class="card-title">Polo Shirt</h5>
+        <p class="card-text">
+          Polo Shirt com gola menor e zíper embutido que combina com o profissional moderno.
+        </p>
+
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
       </div>
-      <div class="modal-body">
-        ...
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2023/11/camisa-polo-personalizada-algodao-preta-laranja-uniforme-empresa-logo-customizavel-320x400.jpg"
+        class="card-img-top" alt="Camisa Polo" />
+      <div class="card-body">
+        <h5 class="card-title">Polo Piquet</h5>
+        <p class="card-text">
+          Camisa Alta Qualidade gola polo em malha Algodão, Piquet, Dry Fit ou PV para uniformes.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2020/03/camisa-p%C3%B3lo-personalizada-para-empresas-uniformes-fardamento-bordada-frente-preta-e-azul-det-11-320x400.jpg"
+        class="card-img-top" alt="Camisa Polo" />
+      <div class="card-body">
+        <h5 class="card-title">Polo Bordada</h5>
+        <p class="card-text">
+          Camisa bordada gola Polo personalizada com manga sobreposta.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2022/07/camiseta-com-gola-polo-para-uniformes-modelos-320x400.jpg"
+        class="card-img-top" alt="Camisa Polo" />
+      <div class="card-body">
+        <h5 class="card-title">Polo Bordada com Gola</h5>
+        <p class="card-text">
+          Camisa bordada tipo gola polo para uniformes e fardas corporativas e empresariais.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2021/09/camisa-camiseta-polo-algodao-personalizada-uniformes-alpha-unforrmes-empresas-branca-laranja-320x400.jpg"
+        class="card-img-top" alt="Camisa Polo" />
+      <div class="card-body">
+        <h5 class="card-title">Polo Camiseta</h5>
+        <p class="card-text">
+          Camisa camiseta gola polo personalizada para uniformes personalizadas.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
       </div>
     </div>
   </div>
-</div>
-          
-        </div>
-      </div>
 
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/500x500/notebook-samsung-galaxy-book4-intel-core-i3-8gb-ram-ssd-256gb-156-full-hd-windows-11-np750xgj-kg5br/magazineluiza/238407300/b9351a5d8902e673e7ba45d4d13acc8d.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 2</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
+  <!-- inicio card´s2 -->
+  <div class="titleCard subtitleCard">
+    <p>Jalecos Feminino Acinturados</p>
+  </div>
 
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/smartphone-samsung-galaxy-a05-128gb-preto-4g-octa-core-4gb-ram-67-cam-dupla-selfie-8mp/magazineluiza/238036500/5be0fccafef98e0b5a4c3c65fa1f7c8b.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 3</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/fritadeira-eletrica-sem-oleo-air-fryer-mondial-forno-oven-afon-12l-bi-preta-12l/magazineluiza/237219400/1c2f2ed761bb1cd0ce2deb6e922a5a0d.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 4</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/fritadeira-eletrica-sem-oleo-air-fryer-mondial-family-afn-40-bi-preto-4l-com-timer/magazineluiza/228887100/c8c3b47783b851f54be2594719871282.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 4</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- inicio card´s -->
-    <div class="titleCard subtitleCard">
-      <p>Confira as melhores ofertas da semana</p>
-    </div>
-
-    <div class="cardMain">
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/notebook-compaq-presario-427-intel-pentium-n3700-4gb-240gb-ssd-141-linux/magazineluiza/233508700/836857a8ee8cd7586e7ba6c15c263757.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 1</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/apple-iphone-14-128gb-estelar-61-12mp-ios-5g/magazineluiza/237184100/b208242666e673bb1cfff75f61667947.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 2</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/iphone-12-apple-64gb-branco-tela-61-12mp-ios/magazineluiza/231147400/28364f93a9923ece3bc1544b117a25a2.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 3</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/aspirador-de-po-2-em-1-mondial-1100w-turbo-cycle-ap-36-vermelho-e-preto/magazineluiza/237623200/df539ee768893e276bec7f2d9ba3acc2.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 4</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-
-      <div class="card" style="width: 18rem">
-        <img
-          src="https://a-static.mlcdn.com.br/280x210/escova-secadora-mondial-es-02-bi-1200w-3-niveis-de-temperatura-tourmaline-ion/magazineluiza/237252900/0294412806461279d96287bf23ef0ce4.jpg"
-          class="card-img-top"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title">Produto 4</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- blockquote -->
-    <figure class="text-center mt-5 mb-5">
-      <blockquote class="blockquote">
-        <p>Há 40 anos a loja mais completa do Brasil.</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        Líder de vendas em eletroeletrônicos
-        <cite title="Source Title">no Brasil</cite>
-      </figcaption>
-    </figure>
-
-    <!-- footer -->
-    <footer class="text-center bg-body-tertiary p-5">
+  <div class="cardMain">
+    <div class="card" style="width: 18rem">
       <img
-        id="imgLogo"
-        src="https://upload.wikimedia.org/wikipedia/commons/8/81/UOL_logo_old.png"
-        alt=""
-      />
-      <p class="mt-2">A loja on-line mais completa do Brasil</p>
-      <p class="mt-2">Avenida Paulista, 1234 - São Paulo, SP - 01100-000</p>
-      <p class="mt-2 fw-bold">Contato: 32-2502-0394</p>
-      <p class="mt-2">@lojinhaonline</p>
-    </footer>
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2020/04/jaleco-branco-feminino-acinturado-avental-modelo-manga-longa-m%C3%A9dico-dentista-azul-320x400.jpg"
+        class="card-img-top" alt="Jaleco Feminino" />
+      <div class="card-body">
+        <h5 class="card-title">Jaleco Dentista</h5>
+        <p class="card-text">
+          Jaleco Avental Feminino Acinturado Dentista.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
 
-    <!-- footer -->
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2020/04/jaleco-feminino-acinturado-avental-manga-longa-m%C3%A9dico-enfermagem-320x400.jpg"
+        class="card-img-top" alt="Jaleco Feminino" />
+      <div class="card-body">
+        <h5 class="card-title">Jaleco Enfermagem</h5>
+        <p class="card-text">
+          Jaleco Avental Feminino Acinturado Enfermagem.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
 
-    <!-- bootstrap -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2020/03/modelo-jaleco-branco-feminino-m%C3%A9dico-enfermagem-manga-longa-2-Azul-320x400.jpg"
+        class="card-img-top" alt="Jaleco Feminino" />
+      <div class="card-body">
+        <h5 class="card-title">Jaleco Médico</h5>
+        <p class="card-text">
+          Jaleco Branco Feminino manga curta médico e enfermagem.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2017/09/jaleco-cavado-gola-esporte-frente-1-320x400.jpg"
+        class="card-img-top" alt="Jaleco Feminino" />
+      <div class="card-body">
+        <h5 class="card-title">Jaleco Esporte Gabardine</h5>
+        <p class="card-text">
+          Jaleco Feminino Gola Esporte cavado Tecido Gabardine.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem">
+      <img
+        src="https://alphamodasocial.com.br/shop/wp-content/uploads/2017/09/jaleco-cavado-gola-esporte-frente-1-320x400.jpg"
+        class="card-img-top" alt="Jaleco Feminino" />
+      <div class="card-body">
+        <h5 class="card-title">Jaleco Esporte Oxford</h5>
+        <p class="card-text">
+          Jaleco Feminino Gola Esporte cavado Tecido Oxford.
+        </p>
+        <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- blockquote -->
+  <figure class="text-center mt-5 mb-5">
+    <blockquote class="blockquote">
+      <p>Qualidade e profissionalismo que vestem sua equipe! Só na RL Fardamentos.</p>
+    </blockquote>
+    <figcaption class="blockquote-footer">
+      Há 15 anos fazendo fardamentos que fazem a diferença
+      <cite title="Source Title">no seu dia a dia!</cite>
+    </figcaption>
+  </figure>
+
+  <!-- footer -->
+  <footer class="bg-primary text-center text-light p-3">
+    <img id="imgLogo"
+      src="data:image/jpeg;base64,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"
+      alt="Logotipo da empresa" />
+    <p class="mt-2">RL Fardamentos - Sua marca, nossa farda: juntas pelo seu sucesso!</p>
+    <p class="mt-2">Avenida Barão de Vera Cruz, 20A3 CXPST 32, Cruz de Rebouças, Igarasuu, PE - 53.635-015</p>
+    <p class="mt-2 fw-bold">Contato: 81-98727-1407</p>
+    <p class="mt-2">@lojaonlineRL</p>
+  </footer>
+
+  <!-- footer -->
+
+  <!-- bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
