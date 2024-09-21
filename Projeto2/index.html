@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Projeto 2</title>
+  </head>
+  <body>
+    <!-- menu -->
+    <nav class="navbar navbar-expand-lg bg-tertiary">
+      <div class="container">
+        <a class="navbar-brand " href="#"
+          ><img
+            id="imgLogo"
+            src="https://upload.wikimedia.org/wikipedia/commons/8/81/UOL_logo_old.png"
+            alt=""
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Contato</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Pesquisar"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Pesquisar
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <!-- fim menu -->
+
+    <!-- inicio carrossel -->
+    <div id="carouselCaptions" class="carousel slide" data-bs-ride="carousel" >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+          <img
+            src="https://media.istockphoto.com/id/2012883461/pt/foto/ai-data-analysis-business-people-use-ai-to-analyze-financial-related-data-big-data-complex.webp?a=1&b=1&s=612x612&w=0&k=20&c=YRTRQyOVtWSinw-XxKaDh5PkTGoj6Aa7BurFE6Ula0I="
+            class="d-block w-100 imgCarrossel"
+            alt="imagem1 TI"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="tittleCarrosel">Primeira imagem</h5>
+            <p class="subtittleCarrossel">
+              Some representative placeholder content for the first slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://media.istockphoto.com/id/2160407303/pt/foto/the-concept-of-productivity-and-production-capacity-encompasses-industrial-management-focused.webp?a=1&b=1&s=612x612&w=0&k=20&c=7mTU_WbH1FY5W3Ptnrvlfi42QYOW-Lyim_w-QDT6Tk4="
+            class="d-block w-100 imgCarrossel"
+            alt="imagem2 TI"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="tittleCarrosel">Segunda imagem</h5>
+            <p class="subtittleCarrossel">
+              Some representative placeholder content for the second slide.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="https://media.istockphoto.com/id/1475998284/pt/foto/interior-of-big-modern-server-room-3d-rendering-illustration.webp?a=1&b=1&s=612x612&w=0&k=20&c=6xZcMGEUaBFheDqs5klYYcqEQnejsgWnknPEngDCzrk="
+            class="d-block w-100 imgCarrossel"
+            alt="imagem3 TI"
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5 class="tittleCarrosel">Terceira imagem</h5>
+            <p class="subtittleCarrossel">
+              Some representative placeholder content for the third slide.
+            </p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselCaptions"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselCaptions"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- inicio card´s -->
+    <div class="titleCard">
+      <p>Seleção de Ofertas para você!</p>
+    </div>
+
+    <div class="cardMain">
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/smartphone-samsung-galaxy-s23-256gb-preto-5g-8gb-ram-61-cam-tripla-selfie-12mp/magazineluiza/232854100/e9fd12e9a66f2797bce34c5169369937.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 1</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          
+<button type="button" class="btnCard btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Compre agora
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+          
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/500x500/notebook-samsung-galaxy-book4-intel-core-i3-8gb-ram-ssd-256gb-156-full-hd-windows-11-np750xgj-kg5br/magazineluiza/238407300/b9351a5d8902e673e7ba45d4d13acc8d.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 2</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/smartphone-samsung-galaxy-a05-128gb-preto-4g-octa-core-4gb-ram-67-cam-dupla-selfie-8mp/magazineluiza/238036500/5be0fccafef98e0b5a4c3c65fa1f7c8b.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 3</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/fritadeira-eletrica-sem-oleo-air-fryer-mondial-forno-oven-afon-12l-bi-preta-12l/magazineluiza/237219400/1c2f2ed761bb1cd0ce2deb6e922a5a0d.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 4</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/fritadeira-eletrica-sem-oleo-air-fryer-mondial-family-afn-40-bi-preto-4l-com-timer/magazineluiza/228887100/c8c3b47783b851f54be2594719871282.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 4</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- inicio card´s -->
+    <div class="titleCard subtitleCard">
+      <p>Confira as melhores ofertas da semana</p>
+    </div>
+
+    <div class="cardMain">
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/notebook-compaq-presario-427-intel-pentium-n3700-4gb-240gb-ssd-141-linux/magazineluiza/233508700/836857a8ee8cd7586e7ba6c15c263757.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 1</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/apple-iphone-14-128gb-estelar-61-12mp-ios-5g/magazineluiza/237184100/b208242666e673bb1cfff75f61667947.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 2</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/iphone-12-apple-64gb-branco-tela-61-12mp-ios/magazineluiza/231147400/28364f93a9923ece3bc1544b117a25a2.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 3</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/aspirador-de-po-2-em-1-mondial-1100w-turbo-cycle-ap-36-vermelho-e-preto/magazineluiza/237623200/df539ee768893e276bec7f2d9ba3acc2.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 4</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem">
+        <img
+          src="https://a-static.mlcdn.com.br/280x210/escova-secadora-mondial-es-02-bi-1200w-3-niveis-de-temperatura-tourmaline-ion/magazineluiza/237252900/0294412806461279d96287bf23ef0ce4.jpg"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body">
+          <h5 class="card-title">Produto 4</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <a href="#" class="btn btn-primary btnCard">Compre agora</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- blockquote -->
+    <figure class="text-center mt-5 mb-5">
+      <blockquote class="blockquote">
+        <p>Há 40 anos a loja mais completa do Brasil.</p>
+      </blockquote>
+      <figcaption class="blockquote-footer">
+        Líder de vendas em eletroeletrônicos
+        <cite title="Source Title">no Brasil</cite>
+      </figcaption>
+    </figure>
+
+    <!-- footer -->
+    <footer class="text-center bg-body-tertiary p-5">
+      <img
+        id="imgLogo"
+        src="https://upload.wikimedia.org/wikipedia/commons/8/81/UOL_logo_old.png"
+        alt=""
+      />
+      <p class="mt-2">A loja on-line mais completa do Brasil</p>
+      <p class="mt-2">Avenida Paulista, 1234 - São Paulo, SP - 01100-000</p>
+      <p class="mt-2 fw-bold">Contato: 32-2502-0394</p>
+      <p class="mt-2">@lojinhaonline</p>
+    </footer>
+
+    <!-- footer -->
+
+    <!-- bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
